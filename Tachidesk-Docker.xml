@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>Tachidesk-Docker</Name>
+  <Repository>ghcr.io/suwayomi/tachidesk</Repository>
+  <Registry>https://github.com/suwayomi/docker-tachidesk</Registry>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/40696-why-cant-i-post-new-topics-in-here/</Support>
+  <Project>https://github.com/Suwayomi/Tachidesk-Server</Project>
+  <Overview>The official Tachidesk Docker-Container.&#xD;
+&#xD;
+Unless  specified otherwise everything gets saved in the appdata folder.&#xD;
+&#xD;
+Read the Readme's first.&#xD;
+Tachidesk: https://github.com/Suwayomi/Tachidesk-Server&#xD;
+Tachidesk-Docker: https://github.com/suwayomi/docker-tachidesk&#xD;
+&#xD;
+&#xD;
+(Excert from official Tachidesk Readme. Acessed 05.11.2021 (https://github.com/Suwayomi/Tachidesk-Server))&#xD;
+&#xD;
+A free and open source manga reader server that runs extensions built for Tachiyomi.&#xD;
+&#xD;
+Tachidesk is an independent Tachiyomi compatible software and is not a Fork of Tachiyomi.&#xD;
+&#xD;
+Tachidesk is a general term used to describe the combination of Tachidesk-Server(this project) and one of our clients. Think of it roughly like the concept of "distribution" in GNU/Linux distributions, in which Linux(Tachidesk-Server) is the kernel and the difference is which desktop environment(Tachidesk client) you get with it.&#xD;
+&#xD;
+Tachidesk-Server is as multi-platform as you can get. Any platform that runs java and/or has a modern browser can run it. This includes Windows, Linux, macOS, chrome OS, etc. Follow Downloading and Running the app for installation instructions.&#xD;
+&#xD;
+Ability to sync with Tachiyomi is a planned feature.&#xD;
+&#xD;
+&#xD;
+(Excert from official Tachidesk-Docker Readme. Accessed 05.11.2021 (https://github.com/suwayomi/docker-tachidesk))&#xD;
+&#xD;
+Run Tachidesk server inside docker container as non-root user. The server will be running on http://localhost:4567 open this url in your browser.&#xD;
+&#xD;
+Docker Releases - https://github.com/suwayomi/docker-tachidesk/pkgs/container/tachidesk&#xD;
+&#xD;
+Dockerfile - https://github.com/suwayomi/docker-tachidesk&#xD;
+&#xD;
+Tachidesk data location - /home/suwayomi/.local/share/Tachidesk&#xD;
+&#xD;
+Docker images are mutli-arch (linux/386, linux/amd64, linux/arm/v6, linux/arm/v7, linux/arm64, linux/ppc64le, linux/s390x) and has very small size based on alpine linux.&#xD;
+&#xD;
+Log file location - /home/suwayomi/.local/share/Tachidesk/logfile.log&#xD;
+</Overview>
+  <Category>MediaServer:Other</Category>
+  <WebUI>http://[IP]:[PORT:4567]</WebUI>
+  
+<Icon>https://raw.githubusercontent.com/Suwayomi/Tachidesk-Server/master/server/src/main/resources/icon/faviconlogo.png</Icon>
+  <Description>The official Tachidesk Docker-Container.&#xD;
+&#xD;
+Unless  specified otherwise everything gets saved in the appdata folder.&#xD;
+&#xD;
+Read the Readme's first.&#xD;
+Tachidesk: https://github.com/Suwayomi/Tachidesk-Server&#xD;
+Tachidesk-Docker: https://github.com/suwayomi/docker-tachidesk&#xD;
+&#xD;
+&#xD;
+(Excert from official Tachidesk Readme. Acessed 05.11.2021 (https://github.com/Suwayomi/Tachidesk-Server))&#xD;
+&#xD;
+A free and open source manga reader server that runs extensions built for Tachiyomi.&#xD;
+&#xD;
+Tachidesk is an independent Tachiyomi compatible software and is not a Fork of Tachiyomi.&#xD;
+&#xD;
+Tachidesk is a general term used to describe the combination of Tachidesk-Server(this project) and one of our clients. Think of it roughly like the concept of "distribution" in GNU/Linux distributions, in which Linux(Tachidesk-Server) is the kernel and the difference is which desktop environment(Tachidesk client) you get with it.&#xD;
+&#xD;
+Tachidesk-Server is as multi-platform as you can get. Any platform that runs java and/or has a modern browser can run it. This includes Windows, Linux, macOS, chrome OS, etc. Follow Downloading and Running the app for installation instructions.&#xD;
+&#xD;
+Ability to sync with Tachiyomi is a planned feature.&#xD;
+&#xD;
+&#xD;
+(Excert from official Tachidesk-Docker Readme. Accessed 05.11.2021 (https://github.com/suwayomi/docker-tachidesk))&#xD;
+&#xD;
+Run Tachidesk server inside docker container as non-root user. The server will be running on http://localhost:4567 open this url in your browser.&#xD;
+&#xD;
+Docker Releases - https://github.com/suwayomi/docker-tachidesk/pkgs/container/tachidesk&#xD;
+&#xD;
+Dockerfile - https://github.com/suwayomi/docker-tachidesk&#xD;
+&#xD;
+Tachidesk data location - /home/suwayomi/.local/share/Tachidesk&#xD;
+&#xD;
+Docker images are mutli-arch (linux/386, linux/amd64, linux/arm/v6, linux/arm/v7, linux/arm64, linux/ppc64le, linux/s390x) and has very small size based on alpine linux.&#xD;
+&#xD;
+Log file location - /home/suwayomi/.local/share/Tachidesk/logfile.log&#xD;
+</Description>
+  <Config Name="Port for WebUI" Target="4567" Default="4567" Mode="tcp" Description="Port to connect to WebUI.&#13;&#10;Standard 4567." Type="Port" Display="always" Required="true" Mask="false">4567</Config>
+  <Config Name="Appdata" Target="/./home/suwayomi/.local/share/Tachidesk" Default="/mnt/user/appdata/Tachidesk-Docker" Mode="rw" Description="Tachidesk stores its files here." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/Tachidesk-Docker</Config>
+  <Config Name="Library" Target="/./home/suwayomi/.local/share/Tachidesk/manga" Default="" Mode="rw" Description="(Optional) Path to where your Downloads should be stored.&#13;&#10;Default is in Appdata folder." Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Local-Library" Target="/./home/suwayomi/.local/share/Tachidesk/manga-local" Default="" Mode="rw" Description="(Optional) You can add your local Library here.&#13;&#10;Should work like standard Tachiyomi.&#13;&#10;(https://tachiyomi.org/help/guides/local-manga/)" Type="Path" Display="always" Required="false" Mask="false"/>
+</Container>
