@@ -6,7 +6,7 @@
   <Network>bridge</Network>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support>https://forums.unraid.net/topic/40696-why-cant-i-post-new-topics-in-here/</Support>
+  <Support>https://forums.unraid.net/topic/115599-tachidesk-docker-support-thread/</Support>
   <Project>https://github.com/Suwayomi/Tachidesk-Server</Project>
   <Overview>The official Tachidesk Docker-Container.&#xD;
 &#xD;
