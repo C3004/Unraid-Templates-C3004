@@ -20,6 +20,7 @@ https://github.com/comixed/comixed/blob/master/QUICKSTART.md&#xD;
 &#xD;
 After container start wait a bit, as it has a bit of Overhead.&#xD;
 Default accounts are to be found in the Quickstart entry.&#xD;
+The Docker is currently a bit buggy. Be sure to update the root library location to /library and add an ComicVine api key under Administration -> Configuration before adding any comics.
 &#xD;
 Access to opds:&#xD;
 [ServerIP]:[DockerPort]/opds&#xD;
@@ -39,6 +40,7 @@ https://github.com/comixed/comixed/blob/master/QUICKSTART.md&#xD;
 &#xD;
 After container start wait a bit, as it has a bit of Overhead.&#xD;
 Default accounts are to be found in the Quickstart entry.&#xD;
+The Docker is currently a bit buggy. Be sure to update the root library location to /library and add an ComicVine api key under Administration -> Configuration before adding any comics.
 &#xD;
 Access to opds:&#xD;
 [ServerIP]:[DockerPort]/opds&#xD;
@@ -47,8 +49,8 @@ Access to opds:&#xD;
   <Config Name="WebUI" Target="7171" Default="7171" Mode="tcp" Description="Port for WebUI" Type="Port" Display="always" Required="false" Mask="false"/>
   <Config Name="Library" Target="/library" Default="/mnt/user/appdata/comixed/library" Mode="rw" Description="This is where your books will be stored." Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="Database" Target="/root/.comixed" Default="/mnt/user/appdata/comixed/database" Mode="rw" Description="Here the Database which Comixed uses will be saved." Type="Path" Display="always" Required="true" Mask="false"/>
-  <Config Name="Incoming" Target="/library/incoming" Default="/mnt/user/appdata/comixed/library/incoming" Mode="rw" Description="Put files here to import them to the library." Type="Path" Display="always" Required="false" Mask="false"/>
-  <Config Name="Appdata" Target="/root" Default="/mnt/user/appdata/comixed" Mode="rw" Description="Appdata" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Incoming" Target="/incoming" Default="/mnt/user/appdata/comixed/incoming" Mode="rw" Description="Put files here to import them to the library." Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Appdata" Target=".comixed" Default="/mnt/user/appdata/comixed" Mode="rw" Description="Appdata" Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
   <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
   <Confog
