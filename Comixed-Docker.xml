@@ -23,7 +23,7 @@ Default accounts are to be found in the Quickstart entry.&#xD;
 The Docker is currently a bit buggy. Be sure to update the root library location to /library and add an ComicVine api key under Administration -> Configuration before adding any comics.
 &#xD;
 Access to opds:&#xD;
-[ServerIP]:[DockerPort]/opds&#xD;
+(ServerIP):(DockerPort)/opds&#xD;
 </Overview>
   <Category>MediaServer:Other</Category>
   <WebUI>http://[IP]:[PORT:7171]</WebUI>
@@ -43,7 +43,7 @@ Default accounts are to be found in the Quickstart entry.&#xD;
 The Docker is currently a bit buggy. Be sure to update the root library location to /library and add an ComicVine api key under Administration -> Configuration before adding any comics.
 &#xD;
 Access to opds:&#xD;
-[ServerIP]:[DockerPort]/opds&#xD;
+(ServerIP):(DockerPort)/opds&#xD;
 </Description>
   <Labels/>
   <Config Name="WebUI" Target="7171" Default="7171" Mode="tcp" Description="Port for WebUI" Type="Port" Display="always" Required="false" Mask="false"/>
