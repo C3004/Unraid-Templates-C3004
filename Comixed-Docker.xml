@@ -50,7 +50,6 @@ Access to opds:&#xD;
   <Config Name="Library" Target="/library" Default="/mnt/user/appdata/comixed/library" Mode="rw" Description="This is where your books will be stored." Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="Database" Target="/root/.comixed" Default="/mnt/user/appdata/comixed/database" Mode="rw" Description="Here the Database which Comixed uses will be saved." Type="Path" Display="always" Required="true" Mask="false"/>
   <Config Name="Incoming" Target="/incoming" Default="/mnt/user/appdata/comixed/incoming" Mode="rw" Description="Put files here to import them to the library." Type="Path" Display="always" Required="false" Mask="false"/>
-  <Config Name="Appdata" Target=".comixed" Default="/mnt/user/appdata/comixed" Mode="rw" Description="Appdata" Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
   <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
 </Container>
