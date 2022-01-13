@@ -84,10 +84,14 @@ Docker images are mutli-arch (linux/386, linux/amd64, linux/arm/v6, linux/arm/v7
 &#xD;
 Log file location - /home/suwayomi/.local/share/Tachidesk/logfile.log&#xD;
 </Description>
+  <Changes>
+    ### 2022-01-13
+    -Updated internal mount paths for the new ones. Local libraries now supported.
+  </Changes>
   <Config Name="Port for WebUI" Target="4567" Default="4567" Mode="tcp" Description="Port to connect to WebUI.&#13;&#10;Standard 4567." Type="Port" Display="always" Required="true" Mask="false">4567</Config>
   <Config Name="Appdata" Target="/./home/suwayomi/.local/share/Tachidesk" Default="/mnt/user/appdata/Tachidesk-Docker" Mode="rw" Description="Tachidesk stores its files here." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/Tachidesk-Docker</Config>
-  <Config Name="Library" Target="/./home/suwayomi/.local/share/Tachidesk/manga" Default="" Mode="rw" Description="(Optional) Path to where your Downloads should be stored.&#13;&#10;Default is in Appdata folder." Type="Path" Display="always" Required="false" Mask="false"/>
-  <Config Name="Local-Library" Target="/./home/suwayomi/.local/share/Tachidesk/manga-local" Default="" Mode="rw" Description="(Optional) (Local Library is maybe not implemented yet. You can't access it from the webview) You can add your local Library here.&#13;&#10;Should work like standard Tachiyomi.&#13;&#10;(https://tachiyomi.org/help/guides/local-manga/)" Type="Path" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="Library" Target="/./home/suwayomi/.local/share/Tachidesk/downloads" Default="" Mode="rw" Description="(Optional) Path to where your Downloads should be stored.&#13;&#10;Default is in Appdata folder." Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Local-Library" Target="/./home/suwayomi/.local/share/Tachidesk/local" Default="" Mode="rw" Description="(Optional) You can add your local Library here.&#13;&#10;Should work like standard Tachiyomi.&#13;&#10;(https://tachiyomi.org/help/guides/local-manga/)" Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="PUID" Target="PUID" Default="99" Mode="" Description="Container Variable: PUID" Type="Variable" Display="advanced" Required="false" Mask="false">99</Config>
   <Config Name="PGID" Target="PGID" Default="100" Mode="" Description="Container Variable: PGID" Type="Variable" Display="advanced" Required="false" Mask="false">100</Config>
 </Container>
