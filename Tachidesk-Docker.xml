@@ -87,6 +87,7 @@ Log file location - /home/suwayomi/.local/share/Tachidesk/logfile.log&#xD;
   <Changes>
     ### 2022-01-13
     -Updated internal mount paths for the new ones. Local libraries now supported.
+    -There is now a Tachidesk source you can install in your tachiyomi app. To use it download it and go to it's settings. There you can add the Docker as the Server address http://YourUnraidServer:4567
   </Changes>
   <Config Name="Port for WebUI" Target="4567" Default="4567" Mode="tcp" Description="Port to connect to WebUI.&#13;&#10;Standard 4567." Type="Port" Display="always" Required="true" Mask="false">4567</Config>
   <Config Name="Appdata" Target="/./home/suwayomi/.local/share/Tachidesk" Default="/mnt/user/appdata/Tachidesk-Docker" Mode="rw" Description="Tachidesk stores its files here." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/Tachidesk-Docker</Config>
