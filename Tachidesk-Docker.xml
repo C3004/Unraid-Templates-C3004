@@ -11,6 +11,8 @@
   <Overview>The official Tachidesk Docker-Container.&#xD;
 &#xD;
 Unless  specified otherwise everything gets saved in the appdata folder.&#xD;
+The Container has a specified User inside. On Unraid this can lead to errors if the User is nonexistent on the Hostsystem. I haven't found a easy workaround yet but the specified User PUID is 1000 which on Unraid is the first User created when using the Users option in the GUI to add a user. So you could create a new user if you get errors but it feels very sketchy. Also note that the Docker will write it's files with that PUID.
+&#xD;
 &#xD;
 Read the Readme's first.&#xD;
 Tachidesk: https://github.com/Suwayomi/Tachidesk-Server&#xD;
@@ -51,6 +53,8 @@ Log file location - /home/suwayomi/.local/share/Tachidesk/logfile.log&#xD;
   <Description>The official Tachidesk Docker-Container.&#xD;
 &#xD;
 Unless  specified otherwise everything gets saved in the appdata folder.&#xD;
+The Container has a specified User inside. On Unraid this can lead to errors if the User is nonexistent on the Hostsystem. I haven't found a easy workaround yet but the specified User PUID is 1000 which on Unraid is the first User created when using the Users option in the GUI to add a user. So you could create a new user if you get errors but it feels very sketchy. Also note that the Docker will write it's files with that PUID.
+&#xD;
 &#xD;
 Read the Readme's first.&#xD;
 Tachidesk: https://github.com/Suwayomi/Tachidesk-Server&#xD;
