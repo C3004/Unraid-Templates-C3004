@@ -19,6 +19,10 @@ Connect to it's API directly or use the userscript to update directly in the Kom
 Komf is a Metadata Fetcher for Komga. [br]&#xD;
 Connect to it's API directly or use the userscript to update directly in the Komga WebUI.(https://github.com/Snd-R/komf-userscript)</Description>
   <Labels/>
+  <Changes>
+    ### 2022-06-01
+    - add Komf docker
+  </Changes>
   <Config Name="API-Port" Target="8085" Default="8085" Mode="tcp" Description="Komf API port" Type="Port" Display="always" Required="true" Mask="false">8085</Config>
   <Config Name="Path to your Komga Instance" Target="KOMF_KOMGA_BASE_URI" Default="http://komga:8080" Mode="" Description="Path to your Komga Instance.&#13;&#10;Like this:&#13;&#10;http://komga:8080" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Komga-User" Target="KOMF_KOMGA_USER" Default="" Mode="user" Description="Add a user here that has Metadata rights" Type="Variable" Display="always" Required="true" Mask="false"></Config>
