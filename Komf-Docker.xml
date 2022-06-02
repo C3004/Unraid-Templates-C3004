@@ -9,20 +9,22 @@
   <Support>https://forums.unraid.net/topic/124326-komf-docker-support-thread/</Support>
   <Project>https://github.com/Snd-R/komf</Project>
   <Overview>This is Currently API only! [br][br]&#xD;
-Komf is a Metadata Fetcher for Komga. [br]&#xD;
+Komf is a Metadata Fetcher for Komga. You can let it run in the Background to update new added series or [br]&#xD;
 Connect to it's API directly or use the userscript to update directly in the Komga WebUI.(https://github.com/Snd-R/komf-userscript)</Overview>
   <Category>Network:Web MediaServer:Books Tools:Utilities</Category>
   <WebUI/>
   <TemplateURL></TemplateURL>
   <Icon>https://avatars.githubusercontent.com/u/76580768?v=4</Icon>
   <Description>This is Currently API only! [br][br]&#xD;
-Komf is a Metadata Fetcher for Komga. [br]&#xD;
+Komf is a Metadata Fetcher for Komga. You can let it run in the Background to update new added series or [br]&#xD;
 Connect to it's API directly or use the userscript to update directly in the Komga WebUI.(https://github.com/Snd-R/komf-userscript)</Description>
   <Labels/>
   <Changes>
     ### 2022-06-01
-    - add Komf docker
-    - add support link with userscipt installation details
+    - add Komf docker.
+    - add support link with userscipt installation details.
+    ### 2022-06-02
+    - add application.yml and instructions to support link.
   </Changes>
   <Config Name="API-Port" Target="8085" Default="8085" Mode="tcp" Description="Komf API port" Type="Port" Display="always" Required="true" Mask="false">8085</Config>
   <Config Name="Path to your Komga Instance" Target="KOMF_KOMGA_BASE_URI" Default="http://komga:8080" Mode="" Description="Path to your Komga Instance.&#13;&#10;Like this:&#13;&#10;http://komga:8080" Type="Variable" Display="always" Required="true" Mask="false"></Config>
