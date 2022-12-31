@@ -25,11 +25,15 @@ Connect to it's API directly or use the userscript to update directly in the Kom
     - add support link with userscipt installation details.
     ### 2022-06-02
     - add application.yml and instructions to support link.
+    ### 2022-12-31
+    - update Template and config and possibly instructions.
   </Changes>
   <Config Name="API-Port" Target="8085" Default="8085" Mode="tcp" Description="Komf API port" Type="Port" Display="always" Required="true" Mask="false">8085</Config>
   <Config Name="Path to your Komga Instance" Target="KOMF_KOMGA_BASE_URI" Default="http://komga:8080" Mode="" Description="Path to your Komga Instance.&#13;&#10;Like this:&#13;&#10;http://komga:8080" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Komga-User" Target="KOMF_KOMGA_USER" Default="" Mode="user" Description="Add a user here that has Metadata rights" Type="Variable" Display="always" Required="true" Mask="false"></Config>
   <Config Name="Komga-User PW" Target="KOMF_KOMGA_PASSWORD" Default="pw" Mode="" Description="Add a user here that has Metadata rights" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+  <Config Name="Kavita-Base-URL" Target="KOMF_KAVITA_BASE_URI" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Kavita API Key" Target="KOMF_KAVITA_API_KEY" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Log Level" Target="KOMF_LOG_LEVEL" Default="INFO" Mode="" Description="Log Level" Type="Variable" Display="advanced" Required="true" Mask="false">INFO</Config>
   <Config Name="Config" Target="/config" Default="/mnt/user/appdata/komf" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/komf</Config>
 </Container>
