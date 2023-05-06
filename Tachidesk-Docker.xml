@@ -11,7 +11,7 @@
   <Overview>The official Tachidesk Docker-Container.&#xD;
 &#xD;
 Unless  specified otherwise everything gets saved in the appdata folder.&#xD;
-The Container has a specified User inside. On Unraid this can lead to errors if the User is nonexistent on the Hostsystem. I haven't found a easy workaround yet but the specified User PUID is 1000 which on Unraid is the first User created when using the Users option in the GUI to add a user. So you could create a new user if you get errors but it feels very sketchy. Also note that the Docker will write it's files with that PUID. There is now a :develop tag that allows to change the running user like this in extra parameters: -u 99:100 .But it can be removed again so be sure to create Backups!
+You will probably get a error n startup. Check the support link for more info.
 &#xD;
 &#xD;
 Read the Readme's first.&#xD;
