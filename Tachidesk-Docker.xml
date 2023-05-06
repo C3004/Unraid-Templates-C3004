@@ -11,7 +11,7 @@
   <Overview>The official Tachidesk Docker-Container.&#xD;
 &#xD;
 Unless  specified otherwise everything gets saved in the appdata folder.&#xD;
-The Container has a specified User inside. On Unraid this can lead to errors if the User is nonexistent on the Hostsystem. I haven't found a easy workaround yet but the specified User PUID is 1000 which on Unraid is the first User created when using the Users option in the GUI to add a user. So you could create a new user if you get errors but it feels very sketchy. Also note that the Docker will write it's files with that PUID.
+The Container has a specified User inside. On Unraid this can lead to errors if the User is nonexistent on the Hostsystem. I haven't found a easy workaround yet but the specified User PUID is 1000 which on Unraid is the first User created when using the Users option in the GUI to add a user. So you could create a new user if you get errors but it feels very sketchy. Also note that the Docker will write it's files with that PUID. There is now a :develop tag that allows to change the running user like this in extra parameters: -u 99:100 .But it can be removed again so be sure to create Backups!
 &#xD;
 &#xD;
 Read the Readme's first.&#xD;
@@ -22,30 +22,22 @@ Tachidesk-Docker: https://github.com/suwayomi/docker-tachidesk&#xD;
 (Excert from official Tachidesk Readme. Acessed 05.11.2021 (https://github.com/Suwayomi/Tachidesk-Server))&#xD;
 &#xD;
 A free and open source manga reader server that runs extensions built for Tachiyomi.&#xD;
-&#xD;
 Tachidesk is an independent Tachiyomi compatible software and is not a Fork of Tachiyomi.&#xD;
-&#xD;
 Tachidesk is a general term used to describe the combination of Tachidesk-Server(this project) and one of our clients. Think of it roughly like the concept of "distribution" in GNU/Linux distributions, in which Linux(Tachidesk-Server) is the kernel and the difference is which desktop environment(Tachidesk client) you get with it.&#xD;
-&#xD;
 Tachidesk-Server is as multi-platform as you can get. Any platform that runs java and/or has a modern browser can run it. This includes Windows, Linux, macOS, chrome OS, etc. Follow Downloading and Running the app for installation instructions.&#xD;
-&#xD;
 Ability to sync with Tachiyomi is a planned feature.&#xD;
 &#xD;
+(Excert from official Tachidesk-Docker Readme. Accessed 06.05.2023 (https://github.com/suwayomi/docker-tachidesk))&#xD;
 &#xD;
-(Excert from official Tachidesk-Docker Readme. Accessed 05.11.2021 (https://github.com/suwayomi/docker-tachidesk))&#xD;
-&#xD;
-Run Tachidesk server inside docker container as non-root user. The server will be running on http://localhost:4567 open this url in your browser.&#xD;
-&#xD;
+Run Tachidesk-Server inside docker container as non-root user. The server will be running on http://localhost:4567 open this url in your browser.&#xD;
 Docker Releases - https://github.com/suwayomi/docker-tachidesk/pkgs/container/tachidesk&#xD;
-&#xD;
 Dockerfile - https://github.com/suwayomi/docker-tachidesk&#xD;
-&#xD;
 Tachidesk data location - /home/suwayomi/.local/share/Tachidesk&#xD;
-&#xD;
-Docker images are mutli-arch (linux/386, linux/amd64, linux/arm/v6, linux/arm/v7, linux/arm64, linux/ppc64le, linux/s390x) and has very small size based on alpine linux.&#xD;
-&#xD;
-Log file location - /home/suwayomi/.local/share/Tachidesk/logfile.log&#xD;
-</Overview>
+Docker images are mutli-arch (linux/amd64, linux/arm/v7, linux/arm64, linux/ppc64le, linux/s390x) and has small size based on Ubuntu linux.&#xD;
+Legacy alpine images using the -alpine suffix are provided for as-needed use-cases, such as:&#xD;
+    Support for linux platforms linux/386 and linux/arm/v6&#xD;
+    Those that need a smaller image size&#xD;
+Log file location - /home/suwayomi/.local/share/Tachidesk/logfile.log</Overview>
   <Category>MediaServer:Other</Category>
   <WebUI>http://[IP]:[PORT:4567]</WebUI>
   
@@ -100,4 +92,5 @@ Log file location - /home/suwayomi/.local/share/Tachidesk/logfile.log&#xD;
   <Config Name="Appdata" Target="/home/suwayomi/.local/share/Tachidesk" Default="/mnt/user/appdata/Tachidesk-Docker" Mode="rw" Description="Tachidesk stores its files here." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/Tachidesk-Docker</Config>
   <Config Name="Library" Target="/home/suwayomi/.local/share/Tachidesk/downloads" Default="" Mode="rw" Description="(Optional) Path to where your Downloads should be stored.&#13;&#10;Default is in Appdata folder." Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="Local-Library" Target="/home/suwayomi/.local/share/Tachidesk/local" Default="" Mode="rw" Description="(Optional) You can add your local Library here.&#13;&#10;Should work like standard Tachiyomi.&#13;&#10;(https://tachiyomi.org/help/guides/local-manga/)" Type="Path" Display="always" Required="false" Mask="false"/>
+  <Config Name="Timezone" Target="TZ" Default="Europe/London" Mode="" Description="Change the default UTC timezone. Use TZ database name from Timezone list.(https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)" Type="Variable" Display="always" Required="false" Mask="false">Europe/London</Config>
 </Container>
