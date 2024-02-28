@@ -8,9 +8,11 @@
   <Privileged>false</Privileged>
   <Support>https://forums.unraid.net/topic/124326-komf-docker-support-thread/</Support>
   <Project>https://github.com/Snd-R/komf</Project>
-  <Overview>This is Currently API only! [br][br]&#xD;
+  <Overview>
 Komf is a Metadata Fetcher for Komga. You can let it run in the Background to update new added series or [br]&#xD;
-Connect to it's API directly or use the userscript to update directly in the Komga WebUI.(https://github.com/Snd-R/komf-userscript)</Overview>
+Connect to it's API directly and/or use the userscript to update directly in the Komga WebUI.(https://github.com/Snd-R/komf-userscript) [br]&#xD;
+    Note that this is an API Container so there is no WebUI.
+  </Overview>
   <Category>Network:Web MediaServer:Books Tools:Utilities</Category>
   <WebUI/>
   <TemplateURL></TemplateURL>
@@ -34,6 +36,7 @@ Connect to it's API directly or use the userscript to update directly in the Kom
   <Config Name="Komga-User PW" Target="KOMF_KOMGA_PASSWORD" Default="pw" Mode="" Description="Add a user here that has Metadata rights" Type="Variable" Display="always" Required="true" Mask="true"></Config>
   <Config Name="Kavita-Base-URL" Target="KOMF_KAVITA_BASE_URI" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
   <Config Name="Kavita API Key" Target="KOMF_KAVITA_API_KEY" Default="" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Komga/Kavita Library" Target="/books" Default="/mnt/user/Media/books" Mode="rw" Description="Add your Komga/Kavita Library here if you want to use Comic_Info mode or get no write Permission errors. Container Path should be the same as in Komga/Kavita." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/Media/books</Config>
   <Config Name="Log Level" Target="KOMF_LOG_LEVEL" Default="INFO" Mode="" Description="Log Level" Type="Variable" Display="advanced" Required="true" Mask="false">INFO</Config>
   <Config Name="Config" Target="/config" Default="/mnt/user/appdata/komf" Mode="rw" Description="Container Path: /config" Type="Path" Display="advanced" Required="true" Mask="false">/mnt/user/appdata/komf</Config>
 </Container>
