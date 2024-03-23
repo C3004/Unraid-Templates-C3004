@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Tachidesk-Docker</Name>
-  <Repository>ghcr.io/suwayomi/tachidesk</Repository>
+  <Repository>ghcr.io/suwayomi/tachidesk:preview</Repository>
   <Registry>https://github.com/suwayomi/docker-tachidesk</Registry>
   <Network>bridge</Network>
   <Shell>sh</Shell>
@@ -11,7 +11,7 @@
   <Overview>The official Tachidesk Docker-Container.&#xD;
 &#xD;
 Unless  specified otherwise everything gets saved in the appdata folder.&#xD;
-You will probably get a error on startup. Check the support link for more info and fixes.
+If you get an error on startup, check the support link for more info and fixes.
 &#xD;
 &#xD;
 Read the Readme's first.&#xD;
@@ -42,6 +42,7 @@ Log file location - /home/suwayomi/.local/share/Tachidesk/logfile.log</Overview>
   <WebUI>http://[IP]:[PORT:4567]</WebUI>
   
 <Icon>https://raw.githubusercontent.com/Suwayomi/Tachidesk-Server/master/server/src/main/resources/icon/faviconlogo.png</Icon>
+<ExtraParams>-u 99:100</ExtraParams>
   <Description>The official Tachidesk Docker-Container.&#xD;
 &#xD;
 Unless  specified otherwise everything gets saved in the appdata folder.&#xD;
@@ -87,10 +88,21 @@ Log file location - /home/suwayomi/.local/share/Tachidesk/logfile.log&#xD;
     ### 2022-01-13
     -Updated internal mount paths for the new ones. Local libraries now supported.
     -There is now a Tachidesk source you can install in your tachiyomi app. To use it download it and go to it's settings. There you can add the Docker as the Server address http://YourUnraidServer:4567
+    ### 2024-03-23
+    -Made Preview container default. Added a few new variables under advanced.
   </Changes>
   <Config Name="Port for WebUI" Target="4567" Default="4567" Mode="tcp" Description="Port to connect to WebUI.&#13;&#10;Standard 4567." Type="Port" Display="always" Required="true" Mask="false">4567</Config>
   <Config Name="Appdata" Target="/home/suwayomi/.local/share/Tachidesk" Default="/mnt/user/appdata/Tachidesk-Docker" Mode="rw" Description="Tachidesk stores its files here." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/Tachidesk-Docker</Config>
   <Config Name="Library" Target="/home/suwayomi/.local/share/Tachidesk/downloads" Default="" Mode="rw" Description="(Optional) Path to where your Downloads should be stored.&#13;&#10;Default is in Appdata folder." Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="Local-Library" Target="/home/suwayomi/.local/share/Tachidesk/local" Default="" Mode="rw" Description="(Optional) You can add your local Library here.&#13;&#10;Should work like standard Tachiyomi.&#13;&#10;(https://tachiyomi.org/help/guides/local-manga/)" Type="Path" Display="always" Required="false" Mask="false"/>
   <Config Name="Timezone" Target="TZ" Default="Europe/London" Mode="" Description="Change the default UTC timezone. Use TZ database name from Timezone list.(https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)" Type="Variable" Display="always" Required="false" Mask="false">Europe/London</Config>
+  <Config Name="DEBUG" Target="DEBUG" Default="false" Mode="" Description="If extra logging is enabled. Useful for development and troubleshooting. (true/false)" Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="BASIC_AUTH_ENABLED" Target="BASIC_AUTH_ENABLED" Default="false" Mode="" Description="Whether Suwayomi requires HTTP Basic Auth to get in." Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+  <Config Name="BASIC_AUTH_PASSWORD" Target="BASIC_AUTH_PASSWORD" Default="" Mode="" Description="The password to log in to Suwayomi." Type="Variable" Display="advanced" Required="false" Mask="true"/>
+  <Config Name="BASIC_AUTH_USERNAME" Target="BASIC_AUTH_USERNAME" Default="" Mode="" Description="The username to log in to Suwayomi" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="SOCKS_PROXY_ENABLED" Target="SOCKS_PROXY_ENABLED" Default="false" Mode="" Description="Whether Suwayomi will connect through a SOCKS5 proxy" Type="Variable" Display="advanced" Required="false" Mask="false">false</Config>
+  <Config Name="SOCKS_PROXY_HOST" Target="SOCKS_PROXY_HOST" Default="" Mode="" Description="The TCP host of the SOCKS5 proxy" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="SOCKS_PROXY_PORT" Target="SOCKS_PROXY_PORT" Default="" Mode="" Description=" &#9;The port of the SOCKS5 proxy" Type="Variable" Display="advanced" Required="false" Mask="false"/>
+  <Config Name="FLARESOLVERR_ENABLED" Target="FLARESOLVERR_ENABLED" Default=" false" Mode="" Description=" Whether FlareSolverr is enabled and available to use" Type="Variable" Display="advanced" Required="false" Mask="false"> false</Config>
+  <Config Name="FLARESOLVERR_URL" Target="FLARESOLVERR_URL" Default=" http://localhost:8191" Mode="" Description="The URL of the FlareSolverr instance" Type="Variable" Display="always" Required="false" Mask="false"> http://localhost:8191</Config>
 </Container>
