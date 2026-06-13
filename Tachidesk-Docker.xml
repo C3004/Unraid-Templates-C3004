@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>Tachidesk-Docker</Name>
-  <Repository>ghcr.io/suwayomi/tachidesk:preview</Repository>
+  <Repository>ghcr.io/suwayomi/tachidesk:latest</Repository>
   <Registry>https://github.com/suwayomi/docker-tachidesk</Registry>
   <Network>bridge</Network>
   <Shell>sh</Shell>
@@ -105,5 +105,5 @@ Log file location - /home/suwayomi/.local/share/Tachidesk/logfile.log&#xD;
   <Config Name="SOCKS_PROXY_HOST" Target="SOCKS_PROXY_HOST" Default="" Mode="" Description="The TCP host of the SOCKS5 proxy" Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="SOCKS_PROXY_PORT" Target="SOCKS_PROXY_PORT" Default="" Mode="" Description=" &#9;The port of the SOCKS5 proxy" Type="Variable" Display="advanced" Required="false" Mask="false"/>
   <Config Name="FLARESOLVERR_ENABLED" Target="FLARESOLVERR_ENABLED" Default=" false" Mode="" Description=" Whether FlareSolverr is enabled and available to use" Type="Variable" Display="advanced" Required="false" Mask="false"> false</Config>
-  <Config Name="FLARESOLVERR_URL" Target="FLARESOLVERR_URL" Default=" http://localhost:8191" Mode="" Description="The URL of the FlareSolverr instance" Type="Variable" Display="always" Required="false" Mask="false"> http://localhost:8191</Config>
+  <Config Name="FLARESOLVERR_URL" Target="FLARESOLVERR_URL" Default=" http://localhost:8191" Mode="" Description="The URL of the FlareSolverr instance" Type="Variable" Display="advanced" Required="false" Mask="false"> http://localhost:8191</Config>
 </Container>
